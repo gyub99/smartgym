@@ -956,7 +956,7 @@ section {
 --------------------------------------------------------------*/
 .hero-fullscreen {
   width: 100%;
-  min-height: 100vh;
+  min-height: 20vh;
   background: url("../img/hero-fullscreen-bg.jpg") center center;
   background-size: cover;
   position: relative;
@@ -1143,7 +1143,7 @@ section {
 /*--------------------------------------------------------------
 # Featured Services Section
 --------------------------------------------------------------*/
-.cta .service-item {
+.featured .service-item {
   padding: 30px;
   transition: all ease-in-out 0.4s;
   background: var(--color-white);
@@ -1151,40 +1151,40 @@ section {
   border-radius:10px;
 }
 
-.cta .service-item .icon {
+.featured .service-item .icon {
   margin-bottom: 10px;
   margin-right:0.25rem;
 }
 
-.cta .service-item .icon i {
+.featured .service-item .icon i {
   color: var(--color-primary);
   font-size: 2rem;
   transition: 0.3s;
 }
 
-.cta .service-item h4 {
+.featured .service-item h4 {
   font-weight: 600;
   margin-bottom: 15px;
   font-size: 24px;
 }
 
-.cta .service-item h4 a {
+.featured .service-item h4 a {
   color: var(--color-secondary);
   transition: ease-in-out 0.3s;
 }
 
-.cta .service-item p {
+.featured .service-item p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.cta .service-item:hover {
+.featured .service-item:hover {
   transform: translateY(-10px);
   box-shadow: 0px 0 60px 0 rgba(var(--color-secondary-rgb), 0.1);
 }
 
-.cta .service-item:hover h4 {
+.featured .service-item:hover h4 {
   /*color: var(--color-primary);*/
 }
 
@@ -1565,11 +1565,11 @@ section {
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
-.cta .nav-tabs {
+.features .nav-tabs {
   border: 0;
 }
 
-.cta .nav-link {
+.features .nav-link {
   border: 0;
   padding: 25px 20px;
   color: var(--color-secondary);
@@ -1584,67 +1584,67 @@ section {
   height: 100%;
 }
 
-.cta .nav-link i {
+.features .nav-link i {
   font-size: 32px;
   line-height: 0;
 }
 
-.cta .nav-link h4 {
+.features .nav-link h4 {
   font-size: 20px;
   font-weight: 600;
   margin: 10px 0 0 0;
   color: var(--color-secondary);
 }
 
-.cta .nav-link:hover {
+.features .nav-link:hover {
   color: var(--color-primary);
 }
 
-.cta .nav-link.active {
+.features .nav-link.active {
   transition: 0.3s;
   background: var(--color-secondary) linear-gradient(rgba(var(--color-primary-rgb), 0.95), rgba(var(--color-primary-rgb), 0.6));
   border-color: var(--color-primary);
 }
 
-.cta .nav-link.active h4 {
+.features .nav-link.active h4 {
   color: var(--color-white);
 }
 
-.cta .nav-link.active i {
+.features .nav-link.active i {
   color: var(--color-white) !important;
 }
 
-.cta .tab-content {
+.features .tab-content {
   margin-top: 30px;
 }
 
-.cta .tab-pane.active {
+.features .tab-pane.active {
   -webkit-animation: fadeIn 0.5s ease-out;
   animation: fadeIn 0.5s ease-out;
 }
 
-.cta .tab-pane h3 {
+.features .tab-pane h3 {
   font-weight: 600;
   font-size: 36px;
   color: var(--color-secondary);
 }
 
-.cta .tab-pane ul {
+.features .tab-pane ul {
   list-style: none;
   padding: 0;
 }
 
-.cta .tab-pane ul li {
+.features .tab-pane ul li {
   padding-bottom: 10px;
 }
 
-.cta .tab-pane ul i {
+.features .tab-pane ul i {
   font-size: 24px;
   margin-right: 4px;
   color: var(--color-primary);
 }
 
-.cta .tab-pane p:last-child {
+.features .tab-pane p:last-child {
   margin-bottom: 0;
 }
 
