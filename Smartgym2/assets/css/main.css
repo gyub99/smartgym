@@ -113,10 +113,11 @@ section {
 }
 
 .section-header h2 {
-  font-size: 48px;
+  font-size: 50px;
   font-weight: 300;
   margin-bottom: 20px;
   color: var(--color-secondary);
+  font-family:var(--font-dohyeon);
 }
 
 .section-header p {
@@ -499,7 +500,7 @@ section {
     padding: 12px 20px;
     font-size: 16px;
     font-weight: 500;
-    color: rgba(var(--color-white-rgb), 0.7);
+    color: rgba(var(--color-white-rgb), 1);
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -515,7 +516,7 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: var(--color-white);
+    color: var(--color-secondary-light);
   }
 
   .navbar .dropdown ul,
@@ -577,7 +578,7 @@ section {
 --------------------------------------------------------------*/
 .hero-animated {
   width: 100%;
-  min-height: 50vh;
+  min-height: 20vh;
   background: url("../img/hero-bg.png") center center;
   background-size: cover;
   position: relative;
@@ -586,14 +587,17 @@ section {
 
 .hero-animated h2 {
   margin: 0 0 10px 0;
-  font-size: 48px;
-  font-weight: 300;
+  font-size: 40px;
+  font-weight: 500;
   color: var(--color-secondary);
-  font-family: var(--font-secondary);
+  font-family: var(--font-dohyeon);
 }
 
-.hero-animated h2 span {
-  color: var(--color-primary);
+.hero-animated h2 em {
+  color: var(--color-secondary-dark);
+  font-size:80px;
+  font-family: var(--font-title);
+  font-weight:800;
 }
 
 .hero-animated p {
@@ -606,6 +610,13 @@ section {
 .hero-animated .animated {
   margin-bottom: 60px;
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+.hero-animated em{
+  /*color:var(--color-primary);*/
+  font-style:normal;
+  font-weight:bold;
+  font-size:larger;
 }
 
 @media (min-width: 992px) {
@@ -634,12 +645,11 @@ section {
   border-radius: 4px;
   transition: 0.5s;
   color: var(--color-white);
-  background: var(--color-primary);
   font-family: var(--font-secondary);
 }
 
 .hero-animated .btn-get-started:hover {
-  background: rgba(var(--color-primary-rgb), 0.8);
+  background: rgba(var(--color-links-hover-rgb), 0.8);
 }
 
 .hero-animated .btn-watch-video {
@@ -669,11 +679,11 @@ section {
 
 @media (max-width: 640px) {
   .hero-animated h2 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
-  .hero-animated p {
-    font-size: 18px;
+  .hero-animated h2 em {
+    font-size: 45px;
     margin-bottom: 30px;
   }
 
@@ -710,11 +720,8 @@ section {
   width: 100%;
   min-height: 60vh;
   padding: 50px;
-  background: var(--color-black);
-  background: url("../img/hero-bg.png") center center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: rgba(var(--color-links-hover-rgb),0.15);
+  
   position: relative;
   display: flex;
   flex-direction: column;
@@ -722,6 +729,7 @@ section {
   padding: 60px 0 60px 0;
   margin-bottom:60px;
 }
+
 
 @media (max-width: 640px) {
   .hero .container {
@@ -731,58 +739,60 @@ section {
 
 .hero h2 {
   color: var(--color-secondary);
-  margin-bottom: 25px;
-  font-size: 2rem;
-  font-weight: 500;
-  -webkit-animation: fadeInDown 1s both 0.2s;
-  animation: fadeInDown 1s both 0.2s;
+  margin-bottom: 15px;
+  font-size: 35px;
+  font-weight: 400;
+  -webkit-animation: fadeInDown 0.5s both 0.1s;
+  animation: fadeInDown 0.5s both 0.1s;
+  font-family:var(--font-dohyeon);
 }
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 30px;
+    font-size: 35px;
   }
 }
 
 .hero p {
   color: var(--color-secondary-light);
-  -webkit-animation: fadeInDown 1s both 0.4s;
-  animation: fadeInDown 1s both 0.4s;
+  -webkit-animation: fadeInDown 0.5s both 0.125s;
+  animation: fadeInDown 0.5s both 0.125s;
   font-weight: 500;
   margin-bottom: 30px;
 }
 
 .hero span{
-  color: var(--color-primary-light);
-  font-size:15px;
+  color: var(--color-primary-dark);
+  font-size:20px;
   margin-left:0.5rem;
-  font-weight:600;
+  font-weight:300;
+
 }
 
 .hero .img {
   margin-bottom: 40px;
-  -webkit-animation: fadeInDownLite 0.6s both;
-  animation: fadeInDownLite 0.6s both;
+  -webkit-animation: fadeInDownLite 0.3s both;
+  animation: fadeInDownLite 0.3s both;
 }
 
 .hero .btn-get-started {
   font-family: var(--font-secondary);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
   padding: 8px 32px;
   border-radius: 5px;
   transition: 0.5s;
-  -webkit-animation: fadeInUp 1s both 0.3s;
-  animation: fadeInUp 1s both 0.3s;
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  -webkit-animation: fadeInUp 0.5s both 0.15s;
+  animation: fadeInUp 0.5s both 0.15s;
+  color: var(--color-links-dark);
+  border: 1px solid rgba(var(--color-primary-dark-rgb),1);
 }
 
 .hero .btn-get-started:hover {
-  border: 2px solid #a6d1e6;
-  color:#a6d1e6;
+  color: rgba(var(--color-primary-dark-rgb), 0.7);
+  border: 1px solid rgba(var(--color-primary-light-rgb),0.7);
 }
 
 .hero .carousel-control-prev {
@@ -856,7 +866,7 @@ section {
 
 .hero .carousel-indicators li.active {
   opacity: 1;
-  background: var(--color-primary);
+  background: var(--color-secondary-light);
 }
 
 @-webkit-keyframes fadeIn {
@@ -956,8 +966,8 @@ section {
 --------------------------------------------------------------*/
 .hero-fullscreen {
   width: 100%;
-  min-height: 20vh;
-  background: url("../img/hero-fullscreen-bg.jpg") center center;
+  min-height: 30vh;
+  background: url("../../img/center1_main.jpg") center center;
   background-size: cover;
   position: relative;
   padding: 120px 0 60px;
@@ -978,10 +988,10 @@ section {
 
 .hero-fullscreen h2 {
   margin: 0 0 10px 0;
-  font-size: 48px;
-  font-weight: 300;
+  font-size: 70px;
+  font-weight: 400;
   color: var(--color-secondary);
-  font-family: var(--font-secondary);
+  font-family: var(--font-dohyeon);
 }
 
 .hero-fullscreen h2 span {
@@ -989,10 +999,11 @@ section {
 }
 
 .hero-fullscreen p {
-  color: rgba(var(--color-secondary-rgb), 0.8);
+  color: var(--color-primary);
   margin: 0 0 30px 0;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 400;
+  font-family:var(--font-dohyeon);
 }
 
 .hero-fullscreen .btn-get-started {
@@ -1036,14 +1047,33 @@ section {
   color: rgba(var(--color-primary-rgb), 0.8);
 }
 
+.menu .nav{
+  background-color:#fefbf6;
+}
+
+.menu .nav a{
+  font-size:larger;
+}
+
+.menu .nav a{
+  color: var(--color-links);
+}
+
+.menu .nav a:hover{
+  color: var(--color-links-hover);
+}
+
+
+
 @media (max-width: 640px) {
   .hero-fullscreen h2 {
-    font-size: 32px;
+    font-size: 45px;
   }
 
   .hero-fullscreen p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color:var(--color-primary);
   }
 
   .hero-fullscreen .btn-get-started,
@@ -1191,6 +1221,10 @@ section {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about h2 span{
+  color:rgba(var(--color-primary-rgb), 0.7);
+}
+
 .about .about-img {
   position: relative;
   margin: 60px 0 0 60px;
@@ -1223,6 +1257,10 @@ section {
   margin-bottom: 20px;
 }
 
+.about .tab-content .contents{
+  margin-bottom:50px;
+}
+
 @media (max-width: 768px) {
   .about h3 {
     font-size: 28px;
@@ -1239,9 +1277,9 @@ section {
 
 .about .nav-link {
   background: none;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
-  color: var(--color-secondary);
+  color: var(--color-secondary-light);
   padding: 12px 0;
   margin-bottom: -2px;
   border-radius: 0;
@@ -1256,13 +1294,38 @@ section {
 
 @media (max-width: 575px) {
   .about .nav-link {
-    font-size: 16px;
+    font-size: 20px;
+    font-weight:bolder;
   }
+}
+
+.about .tab-content h3{
+  font-size: 25px;
+  margin: 20px;
+  margin-top:50px;
+  font-weight: 700;
+  color: var(--color-primary);
+
+}
+
+.about .tab-content table{
+  margin:15px auto 15px auto;
+  text-align:center;
+  width:100%;
+}
+
+.about .tab-content table th{
+  background-color:rgba(var(--color-links-rgb), 0.5);
+  border:1px solid #fefbf6;
+}
+
+.about .tab-content .time-table td{
+  border:1px solid rgba(var(--color-links-rgb), 0.5);
 }
 
 .about .tab-content h4 {
   font-size: 18px;
-  margin: 0;
+  margin: 0px;
   font-weight: 700;
   color: var(--color-secondary);
 }
@@ -1273,6 +1336,80 @@ section {
   margin-right: 8px;
   color: var(--color-primary);
 }
+
+.about .portfolio-item {
+  position: relative;
+  border: 1px solid var(--color-white);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.about .portfolio-item img {
+  transition: all 0.2s;
+}
+
+.about .portfolio-item:before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background: rgba(var(--color-secondary-rgb), 0.8);
+  z-index: 2;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.about .portfolio-item .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  inset: auto 40px 40px 40px;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  padding: 20px;
+}
+
+.about .portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-white);
+  padding-right: 50px;
+}
+
+.about .portfolio-item .portfolio-info .preview-link,
+.about .portfolio-item .portfolio-info .details-link {
+  position: absolute;
+  right: 50px;
+  font-size: 50px;
+  top: calc(50% - 50px);
+  color: rgba(var(--color-white-rgb), 0.7);
+  transition: 0.3s;
+  line-height: 0;
+}
+
+.about .portfolio-item .portfolio-info .preview-link:hover,
+.about .portfolio-item .portfolio-info .details-link:hover {
+  color: var(--color-white);
+}
+
+.about .portfolio-item .portfolio-info .details-link {
+  right: 14px;
+  font-size: 28px;
+}
+
+.about .portfolio-item:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.about .portfolio-item:hover img {
+  transform: scale(1.2);
+}
+
+.about .portfolio-item:hover .portfolio-info {
+  opacity: 1;
+  inset: auto 10px 0 10px;
+}
+
 
 /*--------------------------------------------------------------
 # Clients Section
@@ -1619,8 +1756,8 @@ section {
 }
 
 .features .tab-pane.active {
-  -webkit-animation: fadeIn 0.5s ease-out;
-  animation: fadeIn 0.5s ease-out;
+  -webkit-animation: fadeIn 0.25s ease-out;
+  animation: fadeIn 0.25s ease-out;
 }
 
 .features .tab-pane h3 {
@@ -1667,13 +1804,15 @@ section {
 
 .services .section-header h2{
   font-size:25px;
+
 }
 
 .services .section-header em{
   font-weight:bold;
-  color:var(--color-primary);
+  color:var(--color-secondary);
   font-style:inherit;
   font-size:35px;
+  font-family:var(--font-title);
 }
 
 .services .img {
@@ -1688,45 +1827,47 @@ section {
 .services .details {
   padding: 30px 30px;
   margin: -100px 30px 0 30px;
-  transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.1s;
   background: var(--color-white);
   position: relative;
   background: rgba(var(--color-white-rgb), 0.9);
   text-align: center;
   border-radius: 8px;
   box-shadow: 0px 0 25px rgba(var(--color-black-rgb), 0.1);
+  font-family: var(--font-primary);
 }
 
 .services .details .icon {
   margin: 0;
   width: 72px;
   height: 72px;
-  background: var(--color-primary);
+  background: var(--color-white);
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  color: var(--color-white);
+  color: var(--color-primary-dark);
   font-size: 28px;
-  transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.1s;
   position: absolute;
   top: -36px;
   left: calc(50% - 36px);
-  border: 6px solid var(--color-white);
+  border: 3px solid var(--color-primary-dark);
 }
 
 .services .details h3 {
-  color: var(--color-default);
-  font-weight: 700;
-  margin: 10px 0 15px 0;
-  font-size: 22px;
-  transition: ease-in-out 0.3s;
+  color: var(--color-secondary-dark);
+  font-weight: 400;
+  margin: 10px 0 12px 0;
+  font-size: 30px;
+  transition: ease-in-out 0.1s;
+  font-family:var(--font-dohyeon);
 }
 
 .services .details p {
   line-height: 24px;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 0;
 }
 
@@ -1736,11 +1877,11 @@ section {
 
 .services .service-item:hover .details .icon {
   background: var(--color-white);
-  border: 2px solid var(--color-primary);
+  border: 3px solid var(--color-primary-light);
 }
 
 .services .service-item:hover .details .icon i {
-  color: var(--color-primary);
+  color: var(--color-primary-light);
 }
 
 .services .service-item:hover .img img {
@@ -1988,6 +2129,10 @@ section {
   color: var(--color-secondary);
 }
 
+.faq strong{
+  font-family:var(--font-dohyeon);
+}
+
 .faq .content h4 {
   font-size: 20px;
   font-weight: 500;
@@ -2021,7 +2166,7 @@ section {
   font-weight: 600;
   border: 0;
   font-size: 18px;
-  color: #3d3c42;
+  color: var(--color-secondary);
   text-align: left;
   background: var(--color-white);
   box-shadow: none;
@@ -2029,7 +2174,7 @@ section {
 }
 
 .faq .accordion-button:not(.collapsed) {
-  color: var(--color-primary);
+  color: var(--color-links);
   border-bottom: 0;
   box-shadow: none;
 }
@@ -2039,7 +2184,7 @@ section {
   top: 14px;
   left: 25px;
   font-size: 20px;
-  color: var(--color-primary);
+  color: var(--color-links);
 }
 
 .faq .accordion-button:after {
@@ -2060,6 +2205,10 @@ section {
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+.portfolio span{
+  color:rgba(var(--color-primary-rgb), 0.7);
+}
+
 .portfolio .portfolio-flters {
   padding: 0;
   margin: 0 auto 30px auto;
@@ -2107,7 +2256,7 @@ section {
 }
 
 .portfolio .portfolio-item img {
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
 .portfolio .portfolio-item:before {
@@ -2141,8 +2290,8 @@ section {
 .portfolio .portfolio-item .portfolio-info .details-link {
   position: absolute;
   right: 50px;
-  font-size: 24px;
-  top: calc(50% - 14px);
+  font-size: 50px;
+  top: calc(50% - 50px);
   color: rgba(var(--color-white-rgb), 0.7);
   transition: 0.3s;
   line-height: 0;
@@ -2175,6 +2324,14 @@ section {
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
+.team{
+  background-color:rgba(var(--color-links-hover-rgb), 0.15);
+}
+
+.team span{
+  color:rgba(var(--color-primary-rgb),0.7);
+}
+
 .team .team-member .member-img {
   border-radius: 8px;
   overflow: hidden;
@@ -2231,10 +2388,16 @@ section {
 }
 
 .team .team-member .member-info h4 {
-  font-weight: 400;
-  margin-bottom: 5px;
+  font-weight: 500;
+  margin-bottom: 10px;
   font-size: 24px;
   color: var(--color-secondary);
+}
+
+.team .team-member .member-info h4 a{
+  margin-left:7px;
+  margin-top:auto;
+  margin-bottom:auto;
 }
 
 .team .team-member .member-info span {
@@ -2242,6 +2405,14 @@ section {
   font-size: 16px;
   font-weight: 400;
   color: var(--color-gray);
+
+}
+
+
+.team .team-member .member-info td{
+  padding-right:15px;
+  padding-left:15px;
+  text-align: left;
 }
 
 .team .team-member .member-info p {
@@ -2334,10 +2505,35 @@ section {
 # Contact Section
 --------------------------------------------------------------*/
 .contact .map {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+}
+
+.contact h2{
+  font-family:var(--font-dohyeon);
+  color:var(--color-secondary);
 }
 
 .contact .map iframe {
+  border: 0;
+  width: 100%;
+  height: 400px;
+}
+
+.contact-main{
+  background-color:rgba(var(--color-links-hover-rgb),0.15);
+}
+
+.contact-main .map {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.contact-main h2{
+  font-family:var(--font-dohyeon);
+  color:var(--color-secondary);
+}
+
+.contact-main .map iframe {
   border: 0;
   width: 100%;
   height: 400px;
@@ -2347,6 +2543,7 @@ section {
   padding: 40px;
   box-shadow: 0px 2px 15px rgba(var(--color-black-rgb), 0.1);
   overflow: hidden;
+  background-color:var(--color-white);
 }
 
 .contact .info h3 {
