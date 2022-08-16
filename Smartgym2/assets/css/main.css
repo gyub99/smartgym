@@ -15,6 +15,21 @@
   scroll-behavior: smooth;
 }
 
+@font-face{
+  src:url("../../font/title/ONE\ Mobile\ Title\ OTF.otf");
+  font-family:"ONE_Title";
+}
+
+@font-face{
+  src:url("../../font/main/ONE\ Mobile\ OTF\ Regular.otf");
+  font-family:"ONE_Main";
+}
+
+@font-face{
+  src:url("../../font/main/ONE\ Mobile\ OTF\ Light.otf");
+  font-family:"ONE_Second";
+}
+
 a {
   color: var(--color-links);
   text-decoration: none;
@@ -102,6 +117,10 @@ h6 {
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
+#header a h1 {
+  font-family: var(--font-title);
+}
+
 section {
   padding: 60px 0;
   overflow: hidden;
@@ -113,11 +132,10 @@ section {
 }
 
 .section-header h2 {
-  font-size: 50px;
-  font-weight: 300;
+  font-size: 35px;
   margin-bottom: 20px;
   color: var(--color-secondary);
-  font-family:var(--font-dohyeon);
+  font-family:var(--font-primary);
 }
 
 .section-header p {
@@ -590,13 +608,13 @@ section {
   font-size: 40px;
   font-weight: 500;
   color: var(--color-secondary);
-  font-family: var(--font-dohyeon);
+  font-family: var(--font-title);
 }
 
 .hero-animated h2 em {
   color: var(--color-secondary-dark);
   font-size:80px;
-  font-family: var(--font-title);
+  font-family: var(--font-primary);
   font-weight:800;
 }
 
@@ -717,17 +735,13 @@ section {
 # Carousel Hero Section
 --------------------------------------------------------------*/
 .hero {
-  width: 100%;
   min-height: 60vh;
   padding: 50px;
-  background: rgba(var(--color-links-hover-rgb),0.15);
-  
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 60px 0 60px 0;
-  margin-bottom:60px;
 }
 
 
@@ -744,7 +758,7 @@ section {
   font-weight: 400;
   -webkit-animation: fadeInDown 0.5s both 0.1s;
   animation: fadeInDown 0.5s both 0.1s;
-  font-family:var(--font-dohyeon);
+  font-family:var(--font-title);
 }
 
 @media (max-width: 768px) {
@@ -762,7 +776,7 @@ section {
 }
 
 .hero span{
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   font-size:20px;
   margin-left:0.5rem;
   font-weight:300;
@@ -791,8 +805,8 @@ section {
 }
 
 .hero .btn-get-started:hover {
-  color: rgba(var(--color-primary-dark-rgb), 0.7);
-  border: 1px solid rgba(var(--color-primary-light-rgb),0.7);
+  color: rgba(var(--color-links-hover-rgb), 0.7);
+  border: 1px solid rgba(var(--color-links-hover-rgb),0.7);
 }
 
 .hero .carousel-control-prev {
@@ -991,7 +1005,7 @@ section {
   font-size: 70px;
   font-weight: 400;
   color: var(--color-secondary);
-  font-family: var(--font-dohyeon);
+  font-family: var(--font-title);
 }
 
 .hero-fullscreen h2 span {
@@ -1003,7 +1017,7 @@ section {
   margin: 0 0 30px 0;
   font-size: 40px;
   font-weight: 400;
-  font-family:var(--font-dohyeon);
+  font-family:var(--font-title);
 }
 
 .hero-fullscreen .btn-get-started {
@@ -1221,40 +1235,77 @@ section {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about{
+  background-color: rgba(166, 209, 230, 0.1);
+}
+
+.about h2{
+  font-family:"ONE_Main";
+  font-weight:bolder;
+}
+
 .about h2 span{
-  color:rgba(var(--color-primary-rgb), 0.7);
+  color:rgba(var(--color-primary-rgb), 1);
+}
+
+.about h3 em{
+  color:rgba(var(--color-primary-rgb), 1);
+  font-weight:500;
+  font-style:normal;
+}
+
+.about .final p{
+  font-size: 40px;
+  text-align:center;
+  color:var(--color-secondary);
+  font-family:"ONE_Title";
+  margin-bottom:40px;
+}
+.about .final p em{
+  font-size: 50px;
+  text-align:center;
+  color:var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .about .final p {
+    font-size: 20px;
+    text-align:center;
+    margin-bottom:40px;
+    color:var(--color-secondary);
+    font-family:"ONE_Title";
+  }
+}
+
+@media (max-width: 768px) {
+  .about .final p em {
+    font-size: 25px;
+    color:var(--color-primary);
+  }
 }
 
 .about .about-img {
-  position: relative;
-  margin: 60px 0 0 60px;
+  text-align:center;
 }
 
 .about .about-img:before {
-  position: absolute;
-  inset: -60px 0 0 -60px;
-  z-index: -1;
+  position: center;
   content: "";
-  background: url("../img/about-bg.png") top left;
+  background: url("../img/onfocus-content-bg.jpg") bottom right;
   background-repeat: no-repeat;
 }
 
-@media (max-width: 575px) {
-  .about .about-img {
-    margin: 30px 0 0 30px;
-  }
-
-  .about .about-img:before {
-    inset: -30px 0 0 -30px;
-  }
+.about .filter-product{
+  padding:5px;
 }
 
 .about h3 {
   color: var(--color-secondary);
   font-family: var(--font-secondary);
   font-weight: 300;
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 40px;
+  margin-bottom: 80px;
+  text-align:center;
 }
 
 .about .tab-content .contents{
@@ -1263,7 +1314,9 @@ section {
 
 @media (max-width: 768px) {
   .about h3 {
-    font-size: 28px;
+    font-size: 20px;
+    text-align:center;
+    margin-bottom:40px;
   }
 }
 
@@ -1294,7 +1347,7 @@ section {
 
 @media (max-width: 575px) {
   .about .nav-link {
-    font-size: 20px;
+    font-size: 18px;
     font-weight:bolder;
   }
 }
@@ -1315,8 +1368,11 @@ section {
 }
 
 .about .tab-content table th{
-  background-color:rgba(var(--color-links-rgb), 0.5);
-  border:1px solid #fefbf6;
+  background-color:rgba(var(--color-links-hover-rgb), 0.5);
+  border:2px solid #fefbf6;
+  padding:5px;
+  font-family:"ONE_Main";
+  border-radius:10px;
 }
 
 .about .tab-content .time-table td{
@@ -1812,7 +1868,7 @@ section {
   color:var(--color-secondary);
   font-style:inherit;
   font-size:35px;
-  font-family:var(--font-title);
+  font-family:var(--font-secondary);
 }
 
 .services .img {
@@ -1862,7 +1918,7 @@ section {
   margin: 10px 0 12px 0;
   font-size: 30px;
   transition: ease-in-out 0.1s;
-  font-family:var(--font-dohyeon);
+  font-family:var(--font-title);
 }
 
 .services .details p {
@@ -2119,7 +2175,6 @@ section {
 --------------------------------------------------------------*/
 @media (max-width: 991px) {
   .faq {
-    background-color: rgba(166, 209, 230, 0.1);
   }
 }
 
@@ -2130,7 +2185,7 @@ section {
 }
 
 .faq strong{
-  font-family:var(--font-dohyeon);
+  font-family:var(--font-title);
 }
 
 .faq .content h4 {
@@ -2505,38 +2560,43 @@ section {
 # Contact Section
 --------------------------------------------------------------*/
 .contact .map {
-  margin-bottom: 30px;
+  /*margin-bottom: 30px;*/
+}
+@media (min-width: 1200px) {
+  .contact-main .map iframe{
+    margin-left:40px;
+    padding-right:50px;
+    height:100%;
+    padding-bottom:0px;
+    margin-bottom:0px;
+    position:center;
+  }
 }
 
+
 .contact h2{
-  font-family:var(--font-dohyeon);
   color:var(--color-secondary);
 }
 
 .contact .map iframe {
   border: 0;
   width: 100%;
-  height: 400px;
+  min-height:500px;
 }
 
 .contact-main{
-  background-color:rgba(var(--color-links-hover-rgb),0.15);
-}
-
-.contact-main .map {
-  padding-right: 50px;
-  padding-left: 50px;
+  background-color: rgba(166, 209, 230, 0.1);
 }
 
 .contact-main h2{
-  font-family:var(--font-dohyeon);
+  font-family:var(--font-title);
   color:var(--color-secondary);
 }
 
 .contact-main .map iframe {
   border: 0;
   width: 100%;
-  height: 400px;
+  min-height: 60vh;
 }
 
 .contact .info {
