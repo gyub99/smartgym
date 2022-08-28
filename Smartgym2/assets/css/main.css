@@ -118,7 +118,8 @@ h6 {
 # Sections & Section Header
 --------------------------------------------------------------*/
 #header a h1 {
-  font-family: var(--font-title);
+  font-family: var(--font-primary);
+  font-weight:bolder;
 }
 
 section {
@@ -1115,9 +1116,9 @@ section {
 
 .menu .nav a{
   font-size:larger;
-  font-weight:bold;
   padding-top:5px;
   color: var(--color-white);
+  font-family:var(--font-primary);
 }
 
 .menu .nav a:hover{
@@ -1343,12 +1344,17 @@ section {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about{
-  background-color: rgba(166, 209, 230, 0.1);
+.about {
+  width: 100%;
+  min-height: 20vh;
+  background: url("../img/hero-bg.png") center center;
+  background-size: contain;
+  position: relative;
+  padding: 120px 0 60px;
 }
 
 .about h2{
-  font-family:"ONE_Main";
+  font-family:var(--font-primary);
   font-weight:bolder;
 }
 
@@ -1363,14 +1369,15 @@ section {
 }
 
 .about .final p{
-  font-size: 40px;
+  font-size: 36px;
   text-align:center;
   color:var(--color-secondary);
-  font-family:"ONE_Title";
-  margin-bottom:40px;
+  font-family:var(--font-title);
+  margin-bottom:20px;
+  margin-top:30px;
 }
 .about .final p em{
-  font-size: 50px;
+  font-size: 48px;
   text-align:center;
   color:var(--color-primary);
 }
@@ -1379,9 +1386,9 @@ section {
   .about .final p {
     font-size: 20px;
     text-align:center;
-    margin-bottom:40px;
+    margin-bottom:30px;
     color:var(--color-secondary);
-    font-family:"ONE_Title";
+    font-family:var(--font-title);
   }
 }
 
@@ -1393,7 +1400,8 @@ section {
 }
 
 .about .about-img {
-  text-align:center;
+  margin:0 auto;
+  max-width:700px;
 }
 
 .about .about-img:before {
@@ -1418,6 +1426,7 @@ section {
 
 .about .tab-content .contents{
   margin-bottom:50px;
+  max-width:100px;
 }
 
 @media (max-width: 768px) {
@@ -1433,7 +1442,7 @@ section {
 }
 
 .about .nav-pills li+li {
-  margin-left: 40px;
+  margin-left: 25px;
 }
 
 .about .nav-link {
@@ -1441,7 +1450,7 @@ section {
   font-size: 20px;
   font-weight: 400;
   color: var(--color-secondary-light);
-  padding: 12px 0;
+  padding: 10px 0;
   margin-bottom: -2px;
   border-radius: 0;
   font-family: var(--font-secondary);
@@ -1451,6 +1460,7 @@ section {
   color: var(--color-primary);
   background: none;
   border-bottom: 3px solid var(--color-primary);
+  font-weight:bolder;
 }
 
 @media (max-width: 575px) {
@@ -1470,21 +1480,24 @@ section {
 }
 
 .about .tab-content table{
+  font-family:var(--font-secondary);
   margin:15px auto 15px auto;
   text-align:center;
   width:100%;
+  color:var(--color-white);
+  font-weight:lighter;
 }
 
 .about .tab-content table th{
-  background-color:rgba(var(--color-links-hover-rgb), 0.5);
-  border:2px solid #fefbf6;
-  padding:5px;
-  font-family:"ONE_Main";
+  background-color:rgba(var(--color-secondary-rgb), 0.8);
+  border:2px solid var(--color-white);
+  padding:7px;
+  font-family:var(--font-secondary);
   border-radius:10px;
 }
 
 .about .tab-content .time-table td{
-  border:1px solid rgba(var(--color-links-rgb), 0.5);
+  border:1px solid rgba(var(--color-secondary-light-rgb), 0.5);
 }
 
 .about .tab-content h4 {
@@ -2166,7 +2179,7 @@ section {
 # Pricing Section
 --------------------------------------------------------------*/
 .pricing {
-  background: var(--color-white);
+  background: rgba(166, 209, 230, 0.1);
   padding-left:10px;
   padding-right:10px;
 }
@@ -2187,12 +2200,13 @@ section {
 }
 
 .pricing .pricing-item table{
-  margin:20px;
+  margin:10px;
   margin-bottom:0px;
+  font-family:var(--font-primary);
 }
 .pricing .pricing-item table th{
   text-align:center;
-  font-size:20px;
+  font-size:21px;
   padding:15px;
   font-family:var(--font-primary);
   border-top:solid 3px var(--color-secondary);
@@ -2208,7 +2222,7 @@ section {
 }
 
 .pricing .pricing-item table td{
-  padding:3px;
+  padding:7px 7px 3px 10px;
 }
 
 .pricing .pricing-header {
@@ -2780,13 +2794,16 @@ section {
   font-weight: 700;
   font-size: 28px;
   padding:10px;
-  margin-bottom:20px;
+  padding-bottom:0;
 }
 
 .contact-detail .info p {
-  color: var(--color-secondary-dark);
+  color: var(--color-secondary-light);
   margin-bottom: 30px;
   font-size: 15px;
+  padding:10px;
+  margin-top:0;
+  padding-top:0;
 }
 
 .contact-detail .info-item+.info-item {
