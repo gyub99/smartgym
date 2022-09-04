@@ -83,6 +83,9 @@
   --color-yellow: #ffc107;
   --color-yellow-rgb: 255, 193, 7;
 
+  --color-gold: #eeb422;
+  --color-gold-rgb: 238, 201, 0;
+
   --color-green: #059652;
   --color-green-rgb: 5, 150, 82;
 
@@ -115,6 +118,7 @@
   --bs-red: var(--color-red);
   --bs-orange: var(--color-orange);
   --bs-yellow: var(--color-yellow);
+  --bs-gold: var(--color-gold)
   --bs-green: var(--color-green);
   --bs-teal: var(--color-teal);
   --bs-cyan: var(--color-cyan);
@@ -187,6 +191,7 @@
 .color-red { color: var(--color-red) !important; }
 .color-orange { color: var(--color-orange) !important; }
 .color-yellow { color: var(--color-yellow) !important; }
+.color-gold { color: var(--color-gold) !important; }
 .color-green { color: var(--color-green) !important; }
 .color-teal { color: var(--color-teal) !important; }
 .color-cyan { color: var(--color-cyan) !important; }
@@ -209,6 +214,7 @@
 .bg-red { background-color: var(--color-red) !important; }
 .bg-orange { background-color: var(--color-orange) !important; }
 .bg-yellow { background-color: var(--color-yellow) !important; }
+.bg-gold { background-color: var(--color-gold) !important; }
 .bg-green { background-color: var(--color-green) !important; }
 .bg-teal { background-color: var(--color-teal) !important; }
 .bg-cyan { background-color: var(--color-cyan) !important; }

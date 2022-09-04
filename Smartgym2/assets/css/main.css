@@ -133,7 +133,7 @@ section {
 }
 
 .section-header h2 {
-  font-size: 35px;
+  font-size: 30px;
   margin-bottom: 20px;
   color: var(--color-secondary);
   font-family:var(--font-title);
@@ -607,7 +607,6 @@ section {
 .hero-animated h2 {
   margin: 0 0 10px 0;
   font-size: 40px;
-  font-weight: 500;
   color: var(--color-secondary);
   font-family: var(--font-title);
 }
@@ -615,8 +614,7 @@ section {
 .hero-animated h2 em {
   color: var(--color-secondary-dark);
   font-size:80px;
-  font-family: var(--font-primary);
-  font-weight:800;
+  font-family: var(--font-title);
 }
 
 .hero-animated p {
@@ -634,7 +632,6 @@ section {
 .hero-animated em{
   /*color:var(--color-primary);*/
   font-style:normal;
-  font-weight:bold;
   font-size:larger;
 }
 
@@ -702,7 +699,7 @@ section {
   }
 
   .hero-animated h2 em {
-    font-size: 45px;
+    font-size: 40px;
     margin-bottom: 30px;
   }
 
@@ -1075,15 +1072,15 @@ section {
 
 @media (max-width: 640px) {
   .hero-fullscreen{
-    padding-left:20px;
+    padding-left:15px;
   }
 
   .hero-fullscreen h2 {
-    font-size: 45px;
+    font-size: 35px;
   }
 
   .hero-fullscreen p {
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 10px;
     color:var(--color-primary);
   }
@@ -1156,9 +1153,9 @@ section {
 @media (max-width: 860px) {
 
   .menu .nav{
-    font-size:12px;
-    padding-left:3px;
-    padding-right:3px;
+    font-size:11px;
+    padding-left:0px;
+    padding-right:0px;
   }
 
 }
@@ -1266,7 +1263,6 @@ section {
 .featured-services .section-header h2{
   font-family: 'PT Serif', sans-serif;
   font-style:italic;
-  font-weight:bold;
   transition: all ease-in-out 0.3s;
 }
 
@@ -1277,7 +1273,7 @@ section {
   height: 100%;
   width:100%;
   font-family:var(--font-title);
-  box-shadow: 0px 0 40px 0 rgba(var(--color-secondary-rgb), 0.1);
+  box-shadow: 0px 0 30px 0 rgba(var(--color-secondary-rgb), 0.1);
 }
 
 .featured-services .service-item .icon {
@@ -1489,7 +1485,7 @@ section {
 }
 
 .about .tab-content table th{
-  background-color:rgba(var(--color-secondary-rgb), 0.8);
+  background-color:rgba(var(--color-primary-dark-rgb), 0.9);
   border:2px solid var(--color-white);
   padding:7px;
   font-family:var(--font-secondary);
@@ -2222,7 +2218,11 @@ section {
 }
 
 .pricing .pricing-item table td{
-  padding:7px 7px 3px 10px;
+  padding:7px 3px 3px 3px;
+}
+
+.pricing .pricing-item table .price{
+  width:40%;
 }
 
 .pricing .pricing-header {
@@ -2244,7 +2244,7 @@ section {
 }
 
 .pricing h5 {
-  font-size: 30px;
+  font-size: 26px;
   color: var(--color-white);
   font-weight: 400;
   font-family: var(--font-primary);
@@ -2549,8 +2549,18 @@ section {
 }
 
 .team .team-member .member-img {
-  border-radius: 8px;
   overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  margin-bottom: 20px;
+
+}
+
+.team .team-member .member-img img{
+    width: 100%;
+    position: absolute;
+    top: 0;
 }
 
 .team .team-member .social {
@@ -2800,7 +2810,7 @@ section {
 .contact-detail .info p {
   color: var(--color-secondary-light);
   margin-bottom: 30px;
-  font-size: 15px;
+  font-size: 14px;
   padding:10px;
   margin-top:0;
   padding-top:0;
@@ -2821,7 +2831,7 @@ section {
 
 .contact-detail .info-item h4 {
   padding: 0;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
   color: var(--color-secondary);
@@ -2830,8 +2840,8 @@ section {
 .contact-detail .info-item p {
   padding: 0;
   margin-bottom: 0;
-  font-size: 16px;
-  color: rgba(var(--color-secondary-rgb),0.85);
+  font-size: 14px;
+  color: rgba(var(--color-secondary-rgb),0.9);
   line-height:1.5em;
 }
 
@@ -3207,7 +3217,7 @@ section {
 
 @media (max-width: 575px) {
   .portfolio-details .nav-link {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 
@@ -3223,12 +3233,18 @@ section {
   padding:5px;
   font-family:"ONE_Main";
   border-radius:10px;
+  width:20%;
 }
 
 .portfolio-details .portfolio-info .time-table td{
   border:1px solid rgba(var(--color-black-rgb), 0.5);
+  width:20%;
 }
 
+.portfolio-details .portfolio-info .time-table td span{
+  font-size:smaller;
+  color:var(--color-primary-dark);
+}
 
 .portfolio-details .portfolio-info ul {
   list-style: none;
