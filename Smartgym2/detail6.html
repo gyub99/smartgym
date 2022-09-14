@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="img/logo.jpg" rel="icon">
-  <link href="img/logo.jpg" rel="apple-touch-icon">
+  <link href="img/logo_fav.png" rel="icon">
+  <link href="img/logo_fav.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +39,9 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+   <!--Naver Map-->
+   <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=qghp55jcy1">  </script>
+
   <!-- =======================================================
   * Template Name: HeroBiz - v2.2.0
   * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
@@ -56,7 +59,7 @@
       <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 ><span><img src="img/logo.jpg" alt="logo"></span>SMART GYM</h1>
+        <h1 ><span><img src="img/logo_menu.png" alt="logo"></span></h1>
       </a>
 
       <nav id="navbar" class="navbar">
@@ -362,7 +365,7 @@
               
               <table>
                 <tr>
-                  <th colspan="2">Semi(세미) PT <sub>헬스비, VAT 별도</sub></th>
+                  <th colspan="2">Semi(세미) P.T <sub>헬스비, VAT 별도</sub></th>
                 </tr>
                 <tr>
                   <td>10회</td>
@@ -379,7 +382,7 @@
               </table>
               <table>
                 <tr>
-                  <th colspan="2">1:1 PT <sub>헬스비, VAT 별도</sub></th>
+                  <th colspan="2">1:1 P.T <sub>헬스비, VAT 별도</sub></th>
                 </tr>
                 <tr>
                   <td>10회</td>
@@ -415,7 +418,7 @@
                   <i class="bi bi-geo-alt flex-shrink-0 color-blue"></i>
                   <div>
                     <h4>주소</h4>
-                    <p>충북 청주시 흥덕구 가경로 192 2층 스마트짐 (형석아파트상가)</p>
+                    <p>충북 청주시 흥덕구 가경로 192 2층 스마트짐 (형석아파트 2차상가)</p>
                   </div>
                 </div><!-- End Info Item -->
   
@@ -432,21 +435,20 @@
                   <i class="bi bi-alarm flex-shrink-0 color-black"></i>
                   <div>
                     <h4>영업시간</h4>
-                    <p>평일 AM 06:00 ~ PM 23:00<br>토요일 및 공휴일 AM 09:00 ~ 18:00<br>일요일 AM 12:00 ~ PM 18:00</p>
+                    <p>평일 AM 07:00 ~ PM 23:00<br>토요일 및 공휴일 AM 09:00 ~ 18:00</p>
                   </div>
                 </div><!-- End Info Item -->
   
-                <!--<div class="info-item d-flex">
+                <div class="info-item d-flex">
                   <i class="bi bi-calendar-event flex-shrink-0 color-red"></i>
                   <div>
                     <h4>휴무일</h4>
-                    <p>일요일 및 공휴일</p>
+                    <p>매주 일요일</p>
                   </div>
-                </div>--><!-- End Info Item -->
+                </div><!-- End Info Item -->
             </div>
-            <div class="map col-lg-6 order-2 order-lg-1">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>              
-            </div> <!-- End Google Maps -->
+            <div class="map col-lg-6 order-2 order-lg-1" id="map" 
+            style="border: 0; min-height:300px;"></div> <!-- End Maps -->
           </div>
       
       </div>
@@ -491,6 +493,44 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!--Map-->
+  
+  <script> 
+    var map = new naver.maps.Map('map', {
+       center: new naver.maps.LatLng(36.632165364274755, 127.43641547263422),
+       zoom: 16,
+       zoomControl: true,
+       zoomControlOptions: {
+       style: naver.maps.ZoomControlStyle.SMALL,
+       position: naver.maps.Position.TOP_RIGHT
+       }
+     });
+  
+   var marker = new naver.maps.Marker({
+       map: map,
+       title: "스마트짐 가경복대점",
+       position: new naver.maps.LatLng(36.63191997504327, 127.43636936597615),
+     });
+  
+   var infoWindow = new naver.maps.InfoWindow({
+     content: '<div style="padding:5px;mmargin-right:0;"><h5 style="font-family:var(--font-primary);font-weight:bold;font-size:15px;margin-bottom:0;padding:3px;text-align:center;">스마트짐 가경복대점</h5></div>',
+     borderColor: "var(--color-primary)",
+     borderWidth: 2,
+     maxWidth: 220
+   });
+  
+   naver.maps.Event.addListener(marker, "click", function(e) {
+     if (infoWindow.getMap()) {
+         infoWindow.close();
+     } else {
+         infoWindow.open(map, marker);
+     }
+   });
+ 
+   infoWindow.open(map, marker)
+  
+    </script>
 
 </body>
 

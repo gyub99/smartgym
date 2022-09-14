@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="img/logo.jpg" rel="icon">
-  <link href="img/logo.jpg" rel="apple-touch-icon">
+  <link href="img/logo_fav.png" rel="icon">
+  <link href="img/logo_fav.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,15 +29,12 @@
 
   <!-- Variables CSS Files. Uncomment your preferred color scheme -->
   <link href="assets/css/variables.css" rel="stylesheet">
-  <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!--Naver Map-->
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=qghp55jcy1">  </script>
 
   <!-- =======================================================
   * Template Name: HeroBiz - v2.2.0
@@ -56,7 +53,7 @@
       <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 ><span><img src="img/logo.jpg" alt="logo"></span>SMART GYM</h1>
+        <h1 ><span><img src="img/logo_menu.png" alt="logo"></span></h1>
       </a>
 
       <nav id="navbar" class="navbar">
@@ -134,10 +131,7 @@
   <main id="main">
   <section id="hero-animated" class="hero-animated d-flex align-items-center">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-      <img src="img/logo.jpg" class="img-fluid animated">
-      <div class="section-header">
-        <h2>최고의 선택, <br><em>SMART GYM</em></h2>
-      </div>
+      <img src="img/logo.png" class="img-fluid animated">
     </div>
   </section>
 
@@ -211,114 +205,14 @@
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact-main">
     <div class="container">
-      <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
-      </div><!-- End Google Maps -->
+      <div class="section-header">
+        <h2 style="font-family:'PT Serif';font-style:italic;">Contact Us</h2>
+        <p>각 지점을 누르면 상세한 위치정보를 보실 수 있습니다</p>
+      </div>
+      <div class="map" id="map" style="width: 100%;min-height:500px;"></div><!-- End Maps -->
     </div>
   </section><!-- End Contact Section -->
 
-  <!-- ======= Hero Section ======= -->
-  
-
-  <!--<section id="about" class="about">
-    <div class="container" data-aos="fade-up">
-      <div class="section-header">
-        <h2><span>결과</span>는 정직합니다</span></h2>
-      </div>
-      <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
-        <div class="contents" id="tab3">
-          <div class="d-flex align-items-center mt-4">
-            <i class="bi bi-check2"></i>
-            <h4>Before & After</h4>
-          </div>
-          <table>
-            <tr>
-              <th>Before</th>
-              <th>After</th>
-            </tr>
-            <tr>
-              <td><img class ="img-fluid" src="img/trainer1_2.jpg" alt="before1_1"></td>
-              <td><img class = "img-fluid" src="img/trainer1_3.jpg" alt="after1_1"></td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <th>Before</th>
-              <th>After</th>
-            </tr>
-            <tr>
-              <td><img class ="img-fluid" src="img/trainer1_2.jpg" alt="before1_1"></td>
-              <td><img class = "img-fluid" src="img/trainer1_3.jpg" alt="after1_1"></td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <th>Before</th>
-              <th>After</th>
-            </tr>
-            <tr>
-              <td><img class ="img-fluid" src="img/trainer1_2.jpg" alt="before1_1"></td>
-              <td><img class = "img-fluid" src="img/trainer1_3.jpg" alt="after1_1"></td>
-            </tr>
-          </table>
-      </div>
-
-      </div>
-    </div>
-  </section>-->
-    
-  
-  <!-- ======= F.A.Q Section ======= -->
-    <!--<section id="faq" class="faq">
-      <div class="container-fluid" data-aos="fade-up">
-        <div class="content section-header">
-          <h3><strong>F.A.Q</strong></h3>
-          <p>
-            지점별 운영이 상이할 수 있으니, 자세한 문의는 각 지점을 이용해주시기 바랍니다.
-          </p>
-        </div>
-        <div class="row gy-4">
-
-          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-
-            <div class="accordion accordion-flush px-xl-5" id="faqlist">
-
-              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    그룹PT가 무엇인가요?
-                  </button>
-                </h3>
-                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    그룹PT는 그룹으로 받는 PT입니다
-                  </div>
-                </div>
-              </div>--><!-- # Faq item-->
-
-              <!--<div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    어떤 운동기구가 구비되어 있나요?
-                  </button>
-                </h3>
-                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    ~, ~, ~등 다양한 머신이 구비되어 있습니다. 자세한 기구는 지점별 정보를 참고하시기 바랍니다.
-                  </div>
-                </div>
-              </div>--><!-- # Faq item-->
-
-            <!--</div>
-          </div>
-
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/faq.jpg");'>&nbsp;</div>
-        </div>
-
-      </div>
-    </section>--><!-- End F.A.Q Section -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -358,6 +252,104 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!--Map-->
+  
+  <script> 
+
+   var markers=[],
+       infoWindows = [];
+
+   const locations = [
+            { place:"충대점", lat: 36.62610848273844, lng: 127.4500822681543, address:"충북 청주시 서원구 성봉로 234-1 2층, 3층" },
+            { place:"율량점", lat: 36.66855750329539, lng: 127.4896984964363, address:"충북 청주시 청원구 율봉로 176번길 8-2 2층" },
+            { place:"사천점", lat: 36.66681250323584, lng: 127.48118067930851, address:"충북 청주시 청원구 사뜸로 54 명원빌딩 4층"},
+            { place:"가경점", lat: 36.61701859041245, lng: 127.44400417980103, address:"충북 청주시 흥덕구 가경로 10 4층, 5층" },
+            { place:"율량주중점", lat: 36.660297956089856, lng: 127.50921677543703, address:"충북 청주시 청원구 율중로79번길 34 COZY빌딩 3층" },
+            { place:"가경복대점", lat: 36.63191997504327, lng: 127.43636936597615, address:"충북 청주시 흥덕구 가경로 192 2층 (형석아파트상가)" },
+            { place:"오창점", lat: 36.71281110764645, lng: 127.4290896071278, address:"충북 청주시 청원구 오창읍 중심상업로 23, 6층" },
+        ];
+
+        var map = new naver.maps.Map('map', {
+            center: new naver.maps.LatLng(36.66230891591648, 127.46072585147077),
+            zoom: 12,
+            zoomControl: true,
+            zoomControlOptions: {
+              style: naver.maps.ZoomControlStyle.SMALL,
+              position: naver.maps.Position.TOP_RIGHT
+            }
+        });
+
+        for (var i = 0; i < locations.length; i++) {
+                var marker = new naver.maps.Marker({
+                    map: map,
+                    title: locations[i].place,
+                    position: new naver.maps.LatLng(locations[i].lat, locations[i].lng),
+                });
+
+                var infoWindow = new naver.maps.InfoWindow({
+                  content: '<div style="padding:15px;padding-bottom:10px;"><h5 style="font-family:var(--font-primary);font-weight:bold;font-size:15px;">' + locations[i].place + '</h5><p style="font-family:var(--font-secondary);font-size:13px;";class="color-gray">'+ locations[i].address + '</p><p style="font-family:var(--font-secondary);font-size:12px;margin-bottom:3px;"><a href="detail' + [i+1] + '.html">상세보기</a></div>',
+                  borderColor: "var(--color-primary)",
+                  borderWidth: 4,
+                  maxWidth: 220
+                });
+
+                markers.push(marker);
+                infoWindows.push(infoWindow);
+            }
+
+            naver.maps.Event.addListener(map, 'idle', function() {
+    updateMarkers(map, markers);
+});
+
+function updateMarkers(map, markers) {
+
+    var mapBounds = map.getBounds();
+    var marker, position;
+
+    for (var i = 0; i < markers.length; i++) {
+
+        marker = markers[i]
+        position = marker.getPosition();
+
+        if (mapBounds.hasLatLng(position)) {
+            showMarker(map, marker);
+        } else {
+            hideMarker(map, marker);
+        }
+    }
+}
+
+function showMarker(map, marker) {
+
+    if (marker.setMap()) return;
+    marker.setMap(map);
+}
+
+function hideMarker(map, marker) {
+
+    if (!marker.setMap()) return;
+    marker.setMap(null);
+}
+
+// 해당 마커의 인덱스를 seq라는 클로저 변수로 저장하는 이벤트 핸들러를 반환합니다.
+function getClickHandler(seq) {
+    return function(e) {
+        var marker = markers[seq],
+            infoWindow = infoWindows[seq];
+
+        if (infoWindow.getMap()) {
+            infoWindow.close();
+        } else {
+            infoWindow.open(map, marker);
+        }
+    }
+}
+
+for (var i=0, ii=markers.length; i<ii; i++) {
+    naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
+}
+
+  </script>
 </body>
 
 </html>

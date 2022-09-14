@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="img/logo.jpg" rel="icon">
-  <link href="img/logo.jpg" rel="apple-touch-icon">
+  <link href="img/logo_fav.png" rel="icon">
+  <link href="img/logo_fav.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +39,9 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!--Naver Map-->
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=qghp55jcy1">  </script>
+
   <!-- =======================================================
   * Template Name: HeroBiz - v2.2.0
   * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
@@ -56,7 +59,7 @@
       <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 ><span><img src="img/logo.jpg" alt="logo"></span>SMART GYM</h1>
+        <h1 ><span><img src="img/logo_menu.png" alt="logo"></span></h1>
       </a>
 
       <nav id="navbar" class="navbar">
@@ -334,7 +337,7 @@
 
         <div class="row gy-5">
 
-          <div class="col-xl-4 col-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-xl-4 col-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="team-member">
               <div class="member-img">
                 <a href="img/center4/trainer4_1.png" class="glightbox" data-title="유수빈 매니저"
@@ -371,25 +374,66 @@
             </div>
           </div><!-- End Team Member -->
 
-          <div class="col-xl-4 col-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-xl-4 col-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="team-member">
               <div class="member-img">
-                <a href="img/center4/trainer4_2.jpg" class="glightbox" data-title="김홍식 팀장"
-                data-description="21 WNGP 스포츠모델 체급 2등<br>21 WNGP 스포츠머슬 체급 4등<br>22 NPC 바디빌딩 -65KG 2등<br>22 NPC 클래식피지크 체급 2등"
+                <a href="img/center4/trainer4_2.jpg" class="glightbox" data-title="채대영 트레이너"
+                data-description="생체 2급"
                 data-desc-position="left"
                 data-sizes="(max-width: 600px) 480px, 800px"
                 data-srcset="img480.jpx 480w img800.jpg 800w">
-                  <img src="img/center4/trainer4_2.jpg" alt="img" class="img-fluid"/>
+                  <img src="img/center4/trainer4_2.jpg" alt="trainer4_2" class="img-fluid"/>
                 </a>
               </div>
               <div class="member-info">
                 <div class="social">
                   <a href=""><i class="bi bi-chat-fill"></i></a>
-                  <a href="https://www.instagram.com/hongs_____________/"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.instagram.com/bigzero_c/"><i class="bi bi-instagram"></i></a>
                 </div>
-                <h4><span>팀장</span>김홍식</h4>
+                <h4><span>트레이너</span>채대영</h4>
                 <!--<span>
                   <table>
+                    <tr>
+                      <td>E-mail</td>
+                      <td>cutejw@naver.com</td>
+                    </tr>
+                    <tr>
+                      <td>instagram</td>
+                      <td>cj_smartgym</td>
+                    </tr>
+                    <tr>
+                      <td>KakaoTalk</td>
+                      <td>trainerjw</td>
+                    </tr>
+                  </table>
+                </span>-->
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-4 col-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="team-member">
+              <div class="member-img">
+                <a href="img/center4/trainer4_3.jpg" class="glightbox" data-title="김영해 트레이너"
+                data-description=""
+                data-desc-position="left"
+                data-sizes="(max-width: 600px) 480px, 800px"
+                data-srcset="img480.jpx 480w img800.jpg 800w">
+                  <img src="img/center4/trainer4_3.jpg" alt="trainer4_3" class="img-fluid"/>
+                </a>
+              </div>
+              <div class="member-info">
+                <div class="social">
+                  <a href=""><i class="bi bi-chat-fill"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                </div>
+                <h4><span>트레이너</span>김영해</h4>
+                <!--<span>
+                  <table>
+                    <tr>
+                      <td>E-mail</td>
+                      <td>cutejw@naver.com</td>
+                    </tr>
                     <tr>
                       <td>instagram</td>
                       <td>cj_smartgym</td>
@@ -441,10 +485,32 @@
                   <td class="price">60만원</td>
                 </tr>
               </table>
-              
               <table>
                 <tr>
-                  <th colspan="2">2:1 PT <sub>헬스비, VAT 별도</sub></th>
+                  <th colspan="3">그룹 P.T</th></th>
+                </tr>
+                <tr>
+                  <td rowspan="2" style="width:25%">주 3회</td>
+                  <td>1개월</td>
+                  <td class="price">18만원</td>
+                </tr>
+                <tr>
+                  <td>3개월</td>
+                  <td class="price">42만원</td>
+                </tr>
+                <tr>
+                  <td rowspan="2">주 5회</td>
+                  <td>1개월</td>
+                  <td class="price">22만원</td>
+                </tr>
+                <tr>
+                  <td>3개월</td>
+                  <td class="price">48만원</td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                  <th colspan="2">2:1 P.T <sub>헬스비, VAT 별도</sub></th>
                 </tr>
                 <tr>
                   <td>10회</td>
@@ -461,7 +527,7 @@
               </table>
               <table>
                 <tr>
-                  <th colspan="2">1:1 PT <sub>헬스비, VAT 별도</sub></th>
+                  <th colspan="2">1:1 P.T <sub>헬스비, VAT 별도</sub></th>
                 </tr>
                 <tr>
                   <td>10회</td>
@@ -474,48 +540,6 @@
                 <tr>
                   <td>30회</td>
                   <td class="price">120만원</td>
-                </tr>
-              </table>
-              <table>
-                <tr>
-                  <th colspan="2">그룹P.T (주 3회)</th></th>
-                </tr>
-                <tr>
-                  <td>1개월</td>
-                  <td class="price">18만원</td>
-                </tr>
-                <tr>
-                  <td>3개월</td>
-                  <td class="price">42만원</td>
-                </tr>
-                <tr>
-                  <td>6개월</td>
-                  <td class="price">78만원</td>
-                </tr>
-                <tr>
-                  <td>12개월</td>
-                  <td class="price">120만원</td>
-                </tr>
-              </table>
-              <table>
-                <tr>
-                  <th colspan="2">그룹P.T (주 5회)</th></th>
-                </tr>
-                <tr>
-                  <td>1개월</td>
-                  <td class="price">22만원</td>
-                </tr>
-                <tr>
-                  <td>3개월</td>
-                  <td class="price">48만원</td>
-                </tr>
-                <tr>
-                  <td>6개월</td>
-                  <td class="price">90만원</td>
-                </tr>
-                <tr>
-                  <td>12개월</td>
-                  <td class="price">140만원</td>
                 </tr>
               </table>
             </div>
@@ -538,7 +562,7 @@
                   <i class="bi bi-geo-alt flex-shrink-0 color-blue"></i>
                   <div>
                     <h4>주소</h4>
-                    <p>충북 청주시 흥덕구 가경로 10 4층</p>
+                    <p>충북 청주시 흥덕구 가경로 10 4층, 5층</p>
                   </div>
                 </div><!-- End Info Item -->
   
@@ -555,21 +579,20 @@
                   <i class="bi bi-alarm flex-shrink-0 color-black"></i>
                   <div>
                     <h4>영업시간</h4>
-                    <p>평일 AM 06:00 ~ PM 23:00<br>토요일 및 공휴일 AM 09:00 ~ 18:00<br>일요일 AM 12:00 ~ PM 18:00</p>
+                    <p>평일 AM 06:00 ~ PM 23:00<br>토요일 및 공휴일 AM 09:00 ~ 18:00</p>
                   </div>
                 </div><!-- End Info Item -->
   
-                <!--<div class="info-item d-flex">
+                <div class="info-item d-flex">
                   <i class="bi bi-calendar-event flex-shrink-0 color-red"></i>
                   <div>
                     <h4>휴무일</h4>
-                    <p>일요일 및 공휴일</p>
+                    <p>매주 일요일</p>
                   </div>
-                </div>--><!-- End Info Item -->
+                </div><!-- End Info Item -->
             </div>
-            <div class="map col-lg-6 order-2 order-lg-1">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>              
-            </div> <!-- End Google Maps -->
+            <div class="map col-lg-6 order-2 order-lg-1" id="map" 
+            style="border: 0; min-height:300px;"></div> <!-- End Maps -->
           </div>
       
       </div>
@@ -614,6 +637,44 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!--Map-->
+  
+  <script> 
+    var map = new naver.maps.Map('map', {
+       center: new naver.maps.LatLng(36.61740836361093, 127.4439952361397),
+       zoom: 16,
+       zoomControl: true,
+       zoomControlOptions: {
+       style: naver.maps.ZoomControlStyle.SMALL,
+       position: naver.maps.Position.TOP_RIGHT
+       }
+     });
+  
+   var marker = new naver.maps.Marker({
+       map: map,
+       title: "스마트짐 가경점",
+       position: new naver.maps.LatLng(36.61701859041245, 127.44400417980103),
+     });
+  
+   var infoWindow = new naver.maps.InfoWindow({
+     content: '<div style="padding:5px;mmargin-right:0;"><h5 style="font-family:var(--font-primary);font-weight:bold;font-size:15px;margin-bottom:0;padding:3px;text-align:center;">스마트짐 가경점</h5></div>',
+     borderColor: "var(--color-primary)",
+     borderWidth: 2,
+     maxWidth: 220
+   });
+  
+   naver.maps.Event.addListener(marker, "click", function(e) {
+     if (infoWindow.getMap()) {
+         infoWindow.close();
+     } else {
+         infoWindow.open(map, marker);
+     }
+   });
+ 
+   infoWindow.open(map, marker)
+  
+    </script>
 
 </body>
 
