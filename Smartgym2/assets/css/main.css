@@ -1949,6 +1949,39 @@ section {
   color: var(--color-primary-light);
 }
 
+/*--------------------------------------------------------------
+# Body Profile List
+--------------------------------------------------------------*/
+.bp .bp-list article {
+  box-shadow: 0 4px 16px rgba(var(--color-black-rgb), 0.1);
+  padding: 30px;
+  height: 100%;
+  background-color:var(--color-white);
+}
+
+.bp .bp-list article+article {
+  margin-top: 60px;
+}
+
+.bp .bp-list .bp-img {
+  margin: -40px -30px 0 -30px;
+  padding-top:10px;
+}
+
+
+.bp .bp-list .title {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0;
+  margin: 20px 0 0 -10px;
+}
+
+@media (min-width: 768px) {
+  .bp .bp-list .title {
+    font-size:24px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Footer
